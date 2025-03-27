@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/src/style.css" />
+        <script type="module" src="/src/main.js" defer></script>
+        <title>Scraper Carvalho INC</title>
+    </head>
+    <body>
+        <nav>
+            <form action="#" method="GET">
+                <fieldset>
+                    <input type="text" placeholder="Type a term to scrape" />
+                    <input type="submit" value="Scrape" />
+                </fieldset>
+                <fieldset>
+                    <label for="rawdata">Show data as JSON</label>
+                    <input type="checkbox" id="rawdata" />
+                </fieldset>
+            </form>
+        </nav>
+        <section id="search-history">
+            <p>Search results in this page:</p>
+        </section>
+        <main id="scrape-results"></main>
+        <div popover id="popover"></div>
+    </body>
+</html>
