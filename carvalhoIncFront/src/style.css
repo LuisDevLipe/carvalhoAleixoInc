@@ -58,9 +58,9 @@ nav {
         }
     }
 }
-section#search-history{
+section#search-history {
     display: flex;
-    gap:1rem;
+    gap: 1rem;
     justify-content: start;
     flex-wrap: wrap;
     padding: 1rem;
@@ -79,13 +79,14 @@ section#search-history{
             font-weight: bold;
             cursor: pointer;
         }
-
     }
 }
 
 main#scrape-results {
     width: 70vw;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1), -2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow:
+        2px 0 5px rgba(0, 0, 0, 0.1),
+        -2px 0 5px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     margin: 1rem;
     border-radius: 3rem;
@@ -122,8 +123,12 @@ main#scrape-results {
         }
     }
 }
-
-div#popover{
+main#scrape-results:has(div.product) {
+    > p {
+        display: none;
+    }
+}
+div#popover {
     inset: unset;
     position: fixed;
     top: 2rem;
@@ -134,7 +139,6 @@ div#popover{
     border-radius: 1rem;
 
     color: black;
-
 }
 
 @media (prefers-color-scheme: light) {
