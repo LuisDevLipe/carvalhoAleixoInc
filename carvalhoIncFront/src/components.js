@@ -1,7 +1,7 @@
 function make_product(product, search_term) {
     const wrapper = document.createElement("div");
     wrapper.classList.add("product");
-    wrapper.dataset.searchTerm = search_term.replace(' ', '-');
+    wrapper.dataset.searchTerm = search_term.replace(" ", "-");
     const div = document.createElement("div");
     const title = document.createElement("h2");
     const img = document.createElement("img");
@@ -36,7 +36,7 @@ function show_popover(msg = "Something went wrong :c", timeout = -1) {
 
 function make_search_helper(query) {
     const div = document.createElement("div");
-    div.dataset.searchTerm = query.replace(' ', '-');
+    div.dataset.searchTerm = query.replace(" ", "-");
 
     const p = document.createElement("p");
     p.textContent = query;
@@ -50,10 +50,10 @@ function make_search_helper(query) {
 }
 function make_pre_tag(data, term) {
     const pre = document.createElement("pre");
-    pre.dataset.searchTerm = term.replace(' ', '-');
+    pre.dataset.searchTerm = term.replace(" ", "-");
     pre.textContent = JSON.stringify(data, null, 4);
     document.querySelector("main#scrape-results").append(pre);
+    console.log(JSON.stringify(data, null, 4));
 }
-
 
 export { make_product, show_popover, make_search_helper, make_pre_tag };
